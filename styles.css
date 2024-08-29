@@ -1,0 +1,180 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background:linear-gradient(-120deg, #ac231a, #006838);
+  height: 100%;
+}
+a{
+  text-decoration: none;
+  color: white;
+  padding: 15px 25px; 
+  font-size: 20px;
+}
+.meni li{
+  list-style: none;
+  display: inline-block;
+}
+h1{
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+  font-style: italic;
+
+  /* Animacija */
+  opacity: 0; 
+  animation: fadeIn 3s ease-in-out forwards;
+}
+@keyframes fadeIn {
+  from {
+      opacity: 0; 
+  }
+  to {
+      opacity: 1;
+  }
+}
+#zaglavlje{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
+.pica-slika{
+  width: 30%;
+  /* Animacija */
+  opacity: 0; 
+  animation: fadeIn 3s ease-in-out forwards;
+}
+.uvodna-sekcija{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  margin-top: 3em;
+  margin-bottom: 10%;
+}
+.logo{
+  height: 200px;
+  width: 200px;
+}
+.logo-link{
+  padding: 0;
+}
+#podnožje{
+  border-top: 1px solid white;
+  color: white;
+
+  display: flex;
+  justify-content: left;
+  align-items:flex-end;
+  height: 100px;
+}
+.prava{
+  margin: 20px;
+}
+
+/* o nama start */
+.kontejner-o-nama-paragraf{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+.pica-paragraf{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.o-nama-paragraf{
+  color: white;
+  font-size: 15px;
+  padding: 0 25%;
+  line-height: 2.5rem;
+}
+/* o nama kraj */
+
+/* meni start */
+.pica-meni-kontejner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pica-meni-slika{
+  margin: 50px 0;
+  width: 30%;
+}
+/* meni kraj */
+
+/* kontakt start */
+.kontakt-lista-glavna {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.kontakt-kontejner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  color: white;
+  line-height: 40px;
+  text-align: center;
+}
+.kontakt-sekcija{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.kontakt-paragraf-naslov{
+  margin-bottom: 20px;
+  line-height: 30px;
+}
+/* kontakt kraj */
+
+/* Hamburger meni */
+label, #hamburger { display: none; }
+@media screen and (max-width: 950px){
+    
+ .meni li a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-top: 1px solid #333;
+  }
+ 
+  
+  header label { 
+    display: inline-block; 
+    color: white;
+    background: transparent;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  .meni { display: none; }
+  #hamburger:checked + nav .meni { 
+    display: block; 
+  }
+  /* Hamburger meni kraj */
+
+  #zaglavlje{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+  }
+  h1{
+    font-size: 30px;
+  }
+  .uvodna-sekcija{
+    display: grid;
+    place-items: center;
+  }
+  .o-nama-paragraf{
+    color: white;
+    font-size: 15px;
+    padding: 0 10%;
+    line-height: 2.5rem;
+  }
+}
